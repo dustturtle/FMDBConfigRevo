@@ -185,6 +185,7 @@ static void objectSetter(GlobalConfig *self, SEL _cmd, id object)
         }
         
         // 4.升级数据库（若必要,存在需要新添加的列，使用transaction批量操作）
+        //PS:SQLite的alter不支持添加多列,因此不能在一个sql语句中实现，需要批量操作
         // get configs
         NSMutableArray *configs = [GCFMDBHelper propertyConfigsFromClass:[GlobalConfig class]];
         for (GCConfigInfo *config in configs)
