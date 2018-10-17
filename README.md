@@ -1,8 +1,8 @@
 # FMDBConfigRevo
 Something similar to GVUserDefaults but based on FMDB; thread safe/easy to use. (basic types supported).
 
-//  !!!!! 注意 !!!!! 使用前必读～
-//  为了避免麻烦，尽量使得实现清晰和简洁，我们这里需要遵守的前置约定（合约,使用者必读）：
+//  !!!!! 注意 !!!!! 使用前必读～  
+//  为了避免麻烦，尽量使得实现清晰和简洁，我们这里需要遵守的前置约定（合约,使用者必读）：  
 //  1.配置只增加，不能减少。
 //  2.配置的类型不允许变更。
 //  3.不能使用id这个字符串作为属性名（db里面的主键已经占用了这个名字）。
