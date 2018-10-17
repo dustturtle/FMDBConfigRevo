@@ -46,7 +46,6 @@ enum TypeEncodings {
     String              = 'r',   // 这里的r是后加的，为了编码一致性。是一种特别的情况
 };
 
-// what happened if set to nil? need test. TODO...
 static BOOL boolGetter(GlobalConfig *self, SEL _cmd)
 {
     NSString *key = [self defaultsKeyForSelector:_cmd];
@@ -113,8 +112,16 @@ static id objectGetter(GlobalConfig *self, SEL _cmd)
 static void objectSetter(GlobalConfig *self, SEL _cmd, id object)
 {
     NSString *key = [self defaultsKeyForSelector:_cmd];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
-    [self configWithKey:key value:data];
+    
+    if (object != nil)
+    {
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
+        [self configWithKey:key value:data];
+    }
+    else
+    {
+        [self configWithKey:key value:nil]; // nothing happened; just to log error info.
+    }
 }
 
 #pragma - mark Singlton Method
@@ -351,6 +358,7 @@ static void objectSetter(GlobalConfig *self, SEL _cmd, id object)
 {
     if ([key length] == 0 || value == nil)
     {
+        NSLog(@"configWithKey: input invalid");
         // input invalid.
         return;
     }

@@ -19,11 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    id abb = [NSKeyedArchiver archivedDataWithRootObject:nil];
+    
     // test codes below.
+    GFQConfig.userName = nil;
+    
+    
     
     NSDictionary *dic = GFQConfig.infoDic;
     BOOL flag = GFQConfig.isLogin;
     NSString *name = GFQConfig.userName;
+    
+    GFQConfig.userName = @"chencheng";
     
     NSInteger a = GFQConfig.bbbt;
     
@@ -33,7 +40,7 @@
     
     //[GlobalConfig sharedInstance];
     
-    [GFQConfig clearAllConfigs];
+    //[GFQConfig clearAllConfigs];
 }
 
 
