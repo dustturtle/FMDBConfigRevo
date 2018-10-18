@@ -2,8 +2,8 @@
 //  GlobalConfig.m
 //  SignIn
 //
-//  Created by KevinJack on 15/9/17.
-//  Copyright (c) 2015年 QCStudio. All rights reserved.
+//  Created by KevinJack on 18/10/17.
+//  Copyright (c) 2018年 QCStudio. All rights reserved.
 //
 
 #import "GlobalConfig.h"

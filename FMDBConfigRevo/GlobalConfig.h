@@ -3,9 +3,10 @@
 //  SignIn
 //
 //  FMDB based config.
+//  key-value形式的配置项持久化存储和访问类。
 //
-//  Created by KevinJack on 15/9/17.
-//  Copyright (c) 2015年 QCStudio. All rights reserved.
+//  Created by KevinJack on 18/10/17.
+//  Copyright (c) 2018年 QCStudio. All rights reserved.
 //
 //  !!!!! 注意 !!!!! 使用前必读～
 //  为了避免麻烦，尽量使得实现清晰和简洁，我们这里需要遵守的前置约定（合约,使用者必读）：
