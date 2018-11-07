@@ -9,8 +9,6 @@
 #import "GlobalConfig.h"
 #import "FMDB.h"
 #import "GCFMDBHelper.h"
-#import "GlobalConfig+FQ.h"
-
 
 @interface GlobalConfig ()
 {
